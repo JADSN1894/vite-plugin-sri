@@ -1,6 +1,6 @@
 # Svelte SRI plugin: `plugin-sri`
 
-This plugin  adds **Subresource Integrity (SRI)** attributes to all resources imported by your `index.html` file.
+The plugin implementation is inside the `plugin-sri` folder.
 
 ## Before
 ![Before build](<misc/BeforeBuild.png>)
