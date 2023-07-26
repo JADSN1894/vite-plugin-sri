@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "svelte.svelte-vscode",
+        "usernamehw.errorlens",
+        "yoavbls.pretty-ts-errors",
+        "fivethree.vscode-svelte-snippets",
+        "yzhang.markdown-all-in-one"
+    ]
+}
