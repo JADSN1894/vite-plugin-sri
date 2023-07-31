@@ -27,8 +27,12 @@ The plugin implementation is inside the `plugin-sri` folder.
 
 [**@small-tech/vite-plugin-sri**](https://github.com/small-tech/vite-plugin-sri)
 
-## REFERENCES
+## References
 
 [**Rollup - Build Hooks**](https://rollupjs.org/plugin-development/#build-hooks)
 
 [**gatsby-plugin-sri**](https://github.com/ovhemert/gatsby-plugin-sri/tree/master)
+
+## Discord
+
+[**How can I add Subresource Integrity(SRI) for Svelte/Svelte Kit after build**](https://discord.com/channels/457912077277855764/1133746772947259502)
