@@ -1,11 +1,21 @@
 import { createHash } from "crypto";
-import fs from "fs";
+import { readFileSync } from "fs";
+import { resolve } from 'path';
+
 import replace from "replace-in-file";
+
 import { type Plugin } from "vite";
+
+let viteConfig = null;
 
 export default function subresourceIntegrity(): Plugin {
     return {
         name: "subresource-integrity",
+
+        configResolved(resolvedConfig) {
+            viteConfig = resolvedConfig;
+        },
+
         //! IMPOSSIBLE TO READ THE FILES CONTENT.
         transformIndexHtml: {
             order: "post",
@@ -20,8 +30,9 @@ export default function subresourceIntegrity(): Plugin {
         writeBundle: {
             sequential: true,
             order: "post",
-            async handler({ dir }) {
-                const inputFile = dir.concat("/index.html");
+            async handler() {
+                const buildDirectory = resolve(viteConfig?.build?.outDir || 'dist');
+                const inputFile = buildDirectory.concat("/index.html");
 
                 //* Add SRI to script tags
                 const scriptsRegex = /<script.*/gim;
@@ -42,7 +53,7 @@ export default function subresourceIntegrity(): Plugin {
                             .replace('"', "")
                             .replace('"', "");
 
-                        let contentFile = fs.readFileSync(dir.concat(filePathNormalized), {
+                        let contentFile = readFileSync(buildDirectory.concat(filePathNormalized), {
                             encoding: "utf-8",
                         });
 
@@ -79,7 +90,7 @@ export default function subresourceIntegrity(): Plugin {
                             .at(-1)
                             .replace(/\"/gmi, "")
 
-                        let contentFile = fs.readFileSync(dir.concat(filePathNormalized), {
+                        let contentFile = readFileSync(buildDirectory.concat(filePathNormalized), {
                             encoding: "utf8",
                         });
 
