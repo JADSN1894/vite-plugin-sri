@@ -10,7 +10,7 @@ let viteConfig = null;
 
 export default function subresourceIntegrity(): Plugin {
     return {
-        name: "subresource-integrity",
+        name: "vite-plugin-subresource-integrity",
 
         configResolved(resolvedConfig) {
             viteConfig = resolvedConfig;
