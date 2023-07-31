@@ -1,8 +1,22 @@
 {
   "name": "vite-plugin-sri",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "description": "Subresource integrity (SRI) plugin for Vite",
+  "author": "jadsn <jadsn1894@protonmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JADSN1894/sri.git"
+  },
+  "keywords": [
+    "vite",
+    "sri"
+  ],
+  "bugs": {
+    "url": "https://github.com/JADSN1894/sri/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
