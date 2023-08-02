@@ -13,4 +13,4 @@ update-pkgs: clean
 
 # Generate plugin airtfacts
 build: update-pkgs
-    npm run build
+    @npm run build
