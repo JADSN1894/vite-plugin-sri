@@ -1,10 +1,10 @@
-
 import { Plugin, ResolvedConfig } from 'vite'
 import { readFileSync, writeFileSync } from 'fs'
 import { createHash } from 'node:crypto'
 import { resolve } from 'path'
 import { OutputBundle } from 'rollup'
 import { load } from 'cheerio';
+
 export default function vitePluginSri(): Plugin {
 
   let config: ResolvedConfig
@@ -26,7 +26,7 @@ export default function vitePluginSri(): Plugin {
         const outDir = config?.build?.outDir || (dir ?? 'dist')
         const buildDirectory = resolve(outDir);
 
-        Object.entries(bundle).forEach(([k, v]) => outputBundle[k] = v)
+        Object.entries(bundle).forEach(([key, value]) => outputBundle[key] = value)
 
         const bundleInfo = Object.keys(outputBundle)
           .filter(filename => filename.endsWith('.html'))
@@ -55,11 +55,10 @@ export default function vitePluginSri(): Plugin {
           let root = load(bundleInfo.source)
 
           const calculateIntegrityHashes = async (element: cheerio.TagElement) => {
-            let source: string | Uint8Array | undefined
+            let source: string = "";
             const elementAttributes = element.attribs
             const attributeName = element.attribs.src ? 'src' : 'href'
             const resourceUrl = element.attribs[attributeName]
-
 
             const resourcePath =
               resourceUrl.indexOf(config.base) === 0
@@ -68,38 +67,29 @@ export default function vitePluginSri(): Plugin {
 
             const resourceType = Object.entries(bundle).find(([, bundleItem]) => bundleItem.fileName === resourcePath)?.[1]
 
-            if (!resourceType) {
-              config.logger.warn(`cannot find ${resourcePath} in output bundle.`)
-              try {
-                source = readFileSync(
-                  resolve(dir ?? 'Dir not found', resourcePath)
-                )
-              } catch (error) {
-                source = void 0
+            if (resourceType) {
+              if (resourceType.type === 'asset') {
+                source = resourceType.source as string
+              } else if (resourceType.type === 'chunk') {
+                source = resourceType.code
+              } else {
+                config.logger.warn(`Resource type not recognized`)
               }
             } else {
-              if (resourceType.type === 'asset') {
-                source = resourceType.source
-              } else {
-                source = resourceType.code
-              }
+              source = readFileSync(
+                resolve(dir ?? 'Directory not found', resourcePath),
+                { encoding: 'utf8' }
+              ).toString()
             }
 
-            if (source)
-              elementAttributes.integrity = `sha512-${createHash('sha512')
-                .update(source)
-                .digest('base64')
-                }`
-
-            if (elementAttributes.crossorigin === void 0) {
-              // elementAttributes.crossorigin = 'anonymous'
-            }
+            elementAttributes.integrity = `sha512-${createHash('sha512').update(source).digest('base64')}`
           }
 
-          const scripts = root('script').filter('[src]')
           const stylesheets = root('link').filter('[href]')
+          const scripts = root('script').filter('[src]')
 
           //* Remove crossorigin attributes without value.
+          root(stylesheets).removeAttr("crossorigin").attr("crossorigin", 'anonymous')
           root(scripts).removeAttr("crossorigin").attr("crossorigin", 'anonymous')
 
           //* Implement SRI for scripts and stylesheets.

@@ -14,3 +14,7 @@ update-pkgs: clean
 # Generate plugin airtfacts
 build: update-pkgs
     @npm run build
+
+# Remove git cache
+remove-git-cache:
+    @git rm -rf --cached .
