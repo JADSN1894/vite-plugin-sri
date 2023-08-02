@@ -20,7 +20,8 @@
     }
   },
   "scripts": {
-    "build": "tsup ./index.ts --format cjs,esm --dts --clean"
+    "build": "tsup ./index.ts --format cjs,esm --dts --clean",
+    "example:svelte": "cd examples/svelte-ts && npm run build"
   },
   "homepage": "https://github.com/JonathanLee-LX/vite-plugin-sri#readme",
   "bugs": {
@@ -37,12 +38,11 @@
     "Plugin"
   ],
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.2",
-    "@types/node": "^20.4.5",
-    "node-html-parser": "^6.1.5",
-    "rollup": "^3.27.0",
-    "tsup": "^7.1.0",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.8"
+    "@types/node": "20.4.5",
+    "node-html-parser": "6.1.5",
+    "rollup": "3.27.0",
+    "tsup": "7.1.0",
+    "typescript": "5.1.6",
+    "vite": "4.4.8"
   }
 }

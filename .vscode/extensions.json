@@ -4,6 +4,7 @@
         "usernamehw.errorlens",
         "yoavbls.pretty-ts-errors",
         "fivethree.vscode-svelte-snippets",
-        "yzhang.markdown-all-in-one"
+        "yzhang.markdown-all-in-one",
+        "jnoortheen.nix-ide"
     ]
 }

@@ -11,13 +11,19 @@ The plugin implementation is inside the `plugin-sri` folder.
 
 ## Usage
 
-1. Move the `plugin-sri` folder to the root of your project
-1. Execute `npm i -D @types/node`
-1. Execute `npm i -D replace-in-file`
-1. Add the paths to your include files in your `tsconfig.node.json` file with value `plugin-sri`
-1. At `vite.config.ts` file add, like the image below:
-    1. `import subresourceIntegrity from "plugin-sri";`
-    1. In plugins: `subresourceIntegrity(),` 
+1. `npm i --save-dev vite-plugin-subresource-integrity`
+1. `import subresourceIntegrity from "vite-plugin-subresource-integrity";`
+1. In your `vite.config.js` file:
+
+```ts
+import { defineConfig } from 'vite'
+import sri from '@small-tech/vite-plugin-sri'
+
+export default defineConfig({
+  // …
+  plugins: [sri()]
+})
+``` 
 
 ![Vite config ts](<misc/ViteConfigTs.png>)
 
