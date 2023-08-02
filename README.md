@@ -31,7 +31,21 @@ The plugin implementation is inside the `plugin-sri` folder.
 
 [**Rollup - Build Hooks**](https://rollupjs.org/plugin-development/#build-hooks)
 
+[**Third Party JavaScript Management Cheat Sheet**](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html#subresource-integrity)
+
+[**Content Security Policy Cheat Sheet**](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html#defense-in-depth)
+
+[**Ship ESM & CJS in one Package**](https://antfu.me/posts/publish-esm-and-cjs)
+
+## Repositories
+
+[**Fork of @small-tech/vite-plugin-sri that uses typescript**](https://github.com/JonathanLee-LX/vite-plugin-sri)
+
 [**gatsby-plugin-sri**](https://github.com/ovhemert/gatsby-plugin-sri/tree/master)
+
+[**vite-plugin-inspect**](https://github.com/antfu/vite-plugin-inspect)
+
+[**DefinitelyTyped**](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
 ## Discord
 
