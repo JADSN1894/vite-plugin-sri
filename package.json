@@ -20,7 +20,8 @@
     }
   },
   "scripts": {
-    "build": "tsup ./index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup ./src/index.ts --watch --ignore-watch examples --format cjs,esm --dts --clean",
+    "build": "tsup ./src/index.ts --format cjs,esm --dts --clean --minify",
     "example:svelte": "cd examples/svelte-ts && npm run build"
   },
   "homepage": "https://github.com/JonathanLee-LX/vite-plugin-sri#readme",
@@ -38,7 +39,9 @@
     "Plugin"
   ],
   "devDependencies": {
+    "@types/cheerio": "0.22.31",
     "@types/node": "20.4.5",
+    "cheerio": "1.0.0-rc.12",
     "node-html-parser": "6.1.5",
     "rollup": "3.27.0",
     "tsup": "7.1.0",
