@@ -29,6 +29,7 @@
           vscodium
           nixd
           nixpkgs-fmt
+          nodejs_20
         ];
       in
       {
@@ -38,7 +39,7 @@
           shellHook =
             ''
               codium .
-              zellij --layout ./layout.kdl
+              zellij
             '';
         };
       });
