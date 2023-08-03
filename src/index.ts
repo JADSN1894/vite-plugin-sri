@@ -5,13 +5,13 @@ import { resolve } from 'path'
 import { OutputBundle } from 'rollup'
 import { load } from 'cheerio';
 
-export default function vitePluginSri(): Plugin {
+export default function subresourceIntegrity(): Plugin {
 
   let config: ResolvedConfig
   const outputBundle: OutputBundle = {}
 
   return {
-    name: 'vite-plugin-sri',
+    name: 'vite-plugin-subresource-integrity',
     apply: 'build',
     enforce: 'post',
 

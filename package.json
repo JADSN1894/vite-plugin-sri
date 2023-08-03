@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/JADSN1894/sri.git"
   },
-  "main": "lib/index.cjs",
-  "module": "lib/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "tsup ./src/index.ts --watch --ignore-watch examples --format cjs,esm --dts --clean",
     "build": "tsup ./src/index.ts --format cjs,esm --dts --clean --minify",
-    "example:svelte": "cd examples/svelte-ts && npm run build"
+    "test": "vitest"
   },
   "homepage": "https://github.com/JonathanLee-LX/vite-plugin-sri#readme",
   "bugs": {
@@ -42,10 +42,9 @@
     "@types/cheerio": "0.22.31",
     "@types/node": "20.4.5",
     "cheerio": "1.0.0-rc.12",
-    "node-html-parser": "6.1.5",
-    "rollup": "3.27.0",
     "tsup": "7.1.0",
     "typescript": "5.1.6",
-    "vite": "4.4.8"
+    "vite": "4.4.8",
+    "vitest": "0.34.1"
   }
 }
