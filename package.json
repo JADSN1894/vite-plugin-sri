@@ -1,5 +1,5 @@
 {
-  "name": "@jadsn/vite-plugin-sri",
+  "name": "vite-plugin-subresource-integrity",
   "private": false,
   "version": "0.1.0",
   "type": "module",

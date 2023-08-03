@@ -11,7 +11,7 @@ export default function subresourceIntegrity(): Plugin {
   const outputBundle: OutputBundle = {}
 
   return {
-    name: '@jadsn/vite-plugin-sri',
+    name: 'vite-plugin-subresource-integrity',
     apply: 'build',
     enforce: 'post',
 
