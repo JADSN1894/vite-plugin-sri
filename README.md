@@ -16,13 +16,15 @@ The plugin implementation is inside the `plugin-sri` folder.
 1. In your `vite.config.js` file:
 
 ```ts
+
 import { defineConfig } from 'vite'
-import sri from '@small-tech/vite-plugin-sri'
+import subresourceIntegrity from 'vite-plugin-subresource-integrity'
 
 export default defineConfig({
   // …
-  plugins: [sri()]
+  plugins: [subresourceIntegrity()]
 })
+
 ``` 
 
 ![Vite config ts](<misc/ViteConfigTs.png>)
