@@ -1,6 +1,6 @@
-# Svelte SRI plugin: `plugin-sri`
+# Svelte SRI plugin
 
-The plugin implementation is inside the `plugin-sri` folder.
+Adds subresource integrity hashes to script and stylesheet imports from your `index.html` file at build time.
 
 ## Before
 ![Before build](<misc/BeforeBuild.png>)
