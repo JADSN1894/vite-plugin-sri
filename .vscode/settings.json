@@ -2,4 +2,6 @@
     "editor.fontWeight": "bold",
     "editor.formatOnSave": true,
     "explorer.compactFolders": false,
+    "deno.enable": true,
+    "deno.unstable": true,
 }

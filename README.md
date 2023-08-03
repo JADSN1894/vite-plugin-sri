@@ -55,6 +55,10 @@ export default defineConfig({
 
 [**DefinitelyTyped**](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
+## Deno
+
+[**dnt — the easiest way to publish a hybrid npm module for ESM and CommonJS**](https://deno.com/blog/publish-esm-cjs-module-dnt)
+
 ## Discord
 
 [**How can I add Subresource Integrity(SRI) for Svelte/Svelte Kit after build**](https://discord.com/channels/457912077277855764/1133746772947259502)

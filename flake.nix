@@ -30,6 +30,7 @@
           nixd
           nixpkgs-fmt
           nodejs_20
+          deno
         ];
       in
       {

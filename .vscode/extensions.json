@@ -5,6 +5,7 @@
         "yoavbls.pretty-ts-errors",
         "fivethree.vscode-svelte-snippets",
         "yzhang.markdown-all-in-one",
-        "jnoortheen.nix-ide"
+        "jnoortheen.nix-ide",
+        "denoland.vscode-deno"
     ]
 }
