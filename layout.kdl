@@ -1,0 +1,14 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    
+    pane command="fnm" start_suspended=true {
+        args "use" "20"
+        cwd "/"
+    }
+    
+    pane size=2 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}

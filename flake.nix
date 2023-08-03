@@ -38,7 +38,7 @@
           shellHook =
             ''
               codium .
-              zellij
+              zellij --layout ./layout.kdl
             '';
         };
       });
