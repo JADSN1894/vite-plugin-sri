@@ -4,7 +4,7 @@ import sri from '../src'
 const plugin = sri()
 
 test('ok_plugin_name_is_correct', async (testContext) => {
-    testContext.expect(plugin.name).toBe('vite-plugin-subresource-integrity')
+    testContext.expect(plugin.name).toBe('@jadsn/vite-plugin-sri')
 })
 
 test('ok_plugin_apply_is_for_build', async (testContext) => {

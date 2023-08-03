@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-subresource-integrity",
+  "name": "@jadsn/vite-plugin-sri",
   "private": false,
   "version": "0.1.0",
   "type": "module",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JADSN1894/sri.git"
+    "url": "git+https://github.com/JADSN1894/vite-plugin-sri.git"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -24,9 +24,9 @@
     "build": "tsup ./src/index.ts --format cjs,esm --dts --clean --minify",
     "test": "vitest"
   },
-  "homepage": "https://github.com/JonathanLee-LX/vite-plugin-sri#readme",
+  "homepage": "https://github.com/JADSN1894/vite-plugin-sri#readme",
   "bugs": {
-    "url": "https://github.com/JonathanLee-LX/vite-plugin-sri/issues"
+    "url": "https://github.com/JADSN1894/vite-plugin-sri/issues"
   },
   "files": [
     "dist"
