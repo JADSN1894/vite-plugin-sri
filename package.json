@@ -22,6 +22,7 @@
   "scripts": {
     "dev": "tsup ./src/index.ts --watch --ignore-watch examples --format cjs,esm --dts --clean",
     "build": "tsup ./src/index.ts --format cjs,esm --dts --clean --minify",
+    "npm:publish": "npm run build && npm version patch --force && npm publish",
     "test": "vitest"
   },
   "homepage": "https://github.com/JADSN1894/vite-plugin-sri#readme",
