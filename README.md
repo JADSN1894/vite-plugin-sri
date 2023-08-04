@@ -11,11 +11,8 @@ Adds subresource integrity hashes to script and stylesheet imports from your `in
   </a>
 </p>
 
-
-
 ## Before
 ![Before build](<misc/BeforeBuild.png>)
-
 
 ## After
 ![After build](<misc/AfterBuild.png>)
