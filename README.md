@@ -79,3 +79,7 @@ export default defineConfig({
 ## Discord
 
 [**How can I add Subresource Integrity(SRI) for Svelte/Svelte Kit after build**](https://discord.com/channels/457912077277855764/1133746772947259502)
+
+## Contributing
+
+Found a bug, have a suggestion for a new feature? [Submit an issue](https://github.com/JADSN1894/vite-plugin-sri/issues/new/choose).
