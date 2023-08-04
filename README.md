@@ -2,6 +2,17 @@
 
 Adds subresource integrity hashes to script and stylesheet imports from your `index.html` file at build time.
 
+<p align="center">
+ <a href="https://www.npmjs.com/package/vite-plugin-subresource-integrity">
+    <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version">
+  </a>
+  <a href="https://github.com/JADSN1894/vite-plugin-sri/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="license MIT">
+  </a>
+</p>
+
+
+
 ## Before
 ![Before build](<misc/BeforeBuild.png>)
 
@@ -28,6 +39,19 @@ export default defineConfig({
 ``` 
 
 ![Vite config ts](<misc/ViteConfigTs.png>)
+
+## Tested in
+
+| **Framework**    | **Version**                                                                                                          |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+| vanilla(v5.1.6)  | <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version"> |
+| vue(v3.3.4)      | <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version"> |
+| react(v18.2.0)   | <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version"> |
+| preact(v10.16.0) | <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version"> |
+| lit(v2.8.0)      | <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version"> |
+| svelte(v4.1.2)   | <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version"> |
+| solid(v1.7.9)    | <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version"> |
+| qwik(v1.2.6)     | <img src="https://img.shields.io/npm/v/vite-plugin-subresource-integrity.svg?style=for-the-badge" alt="npm version"> |
 
 ## Alternatives
 
