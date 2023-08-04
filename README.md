@@ -35,8 +35,6 @@ export default defineConfig({
 
 ``` 
 
-![Vite config ts](<misc/ViteConfigTs.png>)
-
 ## Tested in
 
 | **Framework**    | **Version**                                                                                                          |
