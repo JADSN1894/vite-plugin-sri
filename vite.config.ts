@@ -4,7 +4,5 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
     test: {},
-    build: {
-        outDir: 'build'
-    }
+    build: {},
 })
