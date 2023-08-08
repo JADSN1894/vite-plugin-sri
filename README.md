@@ -74,6 +74,10 @@ export default defineConfig({
 
 [**DefinitelyTyped**](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
+## GitHub issues
+
+[**How to execute a plugin after assets are fully generated?**](https://github.com/vitejs/vite/discussions/11043)
+
 ## Discord
 
 [**How can I add Subresource Integrity(SRI) for Svelte/Svelte Kit after build**](https://discord.com/channels/457912077277855764/1133746772947259502)
