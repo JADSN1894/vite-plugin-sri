@@ -3,7 +3,6 @@
 set -ex
 
 sudo apt-get update -y
-sudo npm install -g npm@latest
 
 mkdir -p $HOME/.local/bin
 cd $HOME/.local/bin
