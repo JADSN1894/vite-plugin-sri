@@ -1,0 +1,41 @@
+{
+  "name": "vite-plugin-subresource-integrity",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:debian",
+  "postCreateCommand": "sh .devcontainer/install_tooling.sh",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1.0.11": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2.10.2": {},
+    "ghcr.io/devcontainers/features/node:1.4.1": {},
+    "ghcr.io/shyim/devcontainers-features/bun:0.0.1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.vscode-github-actions",
+        "ms-vscode-remote.remote-containers",
+        "yzhang.markdown-all-in-one",
+        "vivaxy.vscode-conventional-commits",
+        "usernamehw.errorlens",
+        "aaron-bond.better-comments",
+        "tkcandrade.code-annotation",
+        "ardenivanov.svelte-intellisense",
+        "skellock.just",
+        "vscode.theme-defaults",
+        "yoavbls.pretty-ts-errors"
+      ],
+      "settings": {
+        "files.watcherExclude": {
+          "**/target/**": true,
+          "**/node_modules/**": true
+        },
+        "editor.formatOnSave": true,
+        "editor.fontWeight": "bold",
+        "explorer.compactFolders": false,
+        "workbench.colorTheme": "Default Dark Modern",
+        "workbench.preferredDarkColorTheme": "Monokai",
+        "workbench.activityBar.location": "top",
+        "workbench.sideBar.location": "right"
+      }
+    }
+  }
+}
