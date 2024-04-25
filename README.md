@@ -1,5 +1,7 @@
 # Svelte SRI plugin
 
+In the future, this repository will be archived or maybe deleted and migrated to the following [**repository**](https://github.com/JADSN1894/sri), which is accessible through the [**jsr.io**](https://jsr.io/@jadsn/vite-plugin-sri) package registry.
+
 Adds subresource integrity hashes to script and stylesheet imports from your `index.html` file at build time.
 
 <p align="center">
